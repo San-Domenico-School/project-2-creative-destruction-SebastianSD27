@@ -14,12 +14,13 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
 
-    private float speed;
-
+    [Range(5, 30)]
+    [SerializeField] private float speed;
+    
     // Update is called once per frame
     void Update()
     {
-        //to be implemented
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
 }

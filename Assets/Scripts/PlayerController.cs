@@ -18,36 +18,53 @@ public class PlayerController : MonoBehaviour
 
 {
 
-    private GameObject projectile;
-    private float speed;
-    private float centerToEdge;
+    [SerializeField] private GameObject projectile;
+    private float maxSpeed = 30.0f;
+    private float centerToEdge = 20.0f;
     private float move;
+    float newPositionX;
 
     // Start is called before the first frame update
     void Start()
     {
-        //to be implemented
+        maxSpeed = 30.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //to be implemented
+        PlayerMovement();
     }
 
     void PlayerMovement()
     {
-        //to be implemented
+   
+
+        float newPositionX = transform.position.x + move * maxSpeed * Time.deltaTime;
+
+        if (newPositionX > centerToEdge)
+        {
+            newPositionX = centerToEdge;
+        }
+
+        else if (newPositionX < -centerToEdge)
+        {
+            newPositionX = -centerToEdge;
+
+        }
+
+        transform.position = new Vector3(newPositionX, transform.position.y, transform.position.z);
     }
 
     private void OnMove(InputValue input)
     {
-        //to be implemented
+        Vector2 inputVector = input.Get<Vector2>();
+        move = inputVector.x;
     }
 
     private void OnFire()
     {
-        //to be implemented
+        Instantiate(projectile, transform.position + Vector3.up, projectile.transform.rotation);
     }
 
 }

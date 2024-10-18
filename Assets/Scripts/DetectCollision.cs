@@ -16,6 +16,7 @@ using UnityEngine;
 
     private void OnTriggerEnter(Collider other)
     {
-        //to be implemented
+        Destroy(other.gameObject);
+        Destroy(gameObject);
     }
 }

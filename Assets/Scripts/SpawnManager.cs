@@ -8,25 +8,30 @@ using UnityEngine;
  * 
  * 
  * Sebastian Balakier
- * October 9, 2024
+ * October 9, 2024 Version 1.0
  *************************************************/
 
 public class SpawnManager : MonoBehaviour
 {
 
-    private float spawnRange;
-    private float startDelay = 2.0f;
-    private float spawnInterval = 1.5f;
-    private GameObject animals;
+    private float spawnRange = 15.0f;                              // distance to edge from center of field
+    private float startDelay = 5.0f;                       // time before first spawn
+    private float spawnInterval = 0.5f;                    // interval between spawns
+    [SerializeField] private GameObject[] animals;         // list of animals to spawn
 
     // Start is called before the first frame update
     void Start()
     {
-        //to be implemented
+        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 
+    // Adds a random animal at a random point between the spawn ranges
     void SpawnRandomAnimal()
     {
-        //to be implemented
+        int animalIndex = Random.Range(0, animals.Length);
+        Vector3 spawnPosition = new Vector3(Random.Range(-spawnRange, spawnRange), 0.0f, 25.0f);
+        GameObject animal = animals[animalIndex];
+
+        Instantiate(animal, spawnPosition, animal.transform.rotation);
     }
 }

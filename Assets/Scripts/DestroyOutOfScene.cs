@@ -21,18 +21,28 @@ public class DestroyOutOfScene : MonoBehaviour
    // Start is called before the first frame update
    void Start()
    {
-        //to be implemented
-    }
+        UpperBound = 30.0f;
+   }
 
     // Update is called once per frame
     void Update()
    {
-        //to be implemented
-    }
+        DestroyOutOfBounds();
+   }
 
     void DestroyOutOfBounds()
    {
-        //to be implemented
-    }
+        LowerBound = -6.0f;
+
+        if (transform.position.z > UpperBound)
+        {
+            Destroy(gameObject);
+        }
+
+        else if (transform.position.z < LowerBound)
+        {
+            Debug.Log("Game Over");
+        }
+   }
 
 }
