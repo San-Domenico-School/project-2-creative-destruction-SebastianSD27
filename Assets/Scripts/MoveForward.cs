@@ -14,7 +14,7 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
 
-    [Range(5, 30)]
+    [Range(1, 30)]
     [SerializeField] private float speed;
     
     // Update is called once per frame

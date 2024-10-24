@@ -20,14 +20,14 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject projectile;
     private float maxSpeed = 30.0f;
-    private float centerToEdge = 20.0f;
+    private float centerToEdge = 30.0f;
     private float move;
     float newPositionX;
 
     // Start is called before the first frame update
     void Start()
     {
-        maxSpeed = 30.0f;
+        maxSpeed = 10.0f;
     }
 
     // Update is called once per frame
