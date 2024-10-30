@@ -62,9 +62,5 @@ public class PlayerController : MonoBehaviour
         move = inputVector.x;
     }
 
-    private void OnFire()
-    {
-        Instantiate(projectile, transform.position + Vector3.up, projectile.transform.rotation);
-    }
-
+    
 }

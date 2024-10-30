@@ -14,9 +14,20 @@ using UnityEngine;
  public class DetectCollision : MonoBehaviour
 {
 
-    private void OnTriggerEnter(Collider other)
+    private GameManager gameManager;
+
+    private void Start()
     {
-        Destroy(other.gameObject);
-        Destroy(gameObject);
+        gameManager = FindObjectOfType<GameManager>();
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Car"))
+        {
+            gameManager.EndGame();
+        }
+
+    }
+
 }

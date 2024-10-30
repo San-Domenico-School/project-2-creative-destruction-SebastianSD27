@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
 
     private float spawnRange = 15.0f;                              // distance to edge from center of field
     private float startDelay = 0.0f;                       // time before first spawn
-    private float spawnInterval = 1.0f;                    // interval between spawns
+    private float spawnInterval = 0.5f;                    // interval between spawns
     private float[] spawnPositionsX = { -34.5f, -29.0f, -24.0f, -19.5f, -14.3f, -9.3f, -4.5f, };
     [SerializeField] private GameObject[] car;         // list of cars to spawn
 

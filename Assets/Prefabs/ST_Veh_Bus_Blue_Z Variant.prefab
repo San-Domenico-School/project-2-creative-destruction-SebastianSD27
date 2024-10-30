@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ST_Veh_Bus_Blue_Z Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7799a29fdee308341b16b65d8a002357, type: 3}
+      propertyPath: m_TagString
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7799a29fdee308341b16b65d8a002357, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -88,6 +92,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -2724094011822478285}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 7799a29fdee308341b16b65d8a002357,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 782164873452988007}
   m_SourcePrefab: {fileID: 100100000, guid: 7799a29fdee308341b16b65d8a002357, type: 3}
 --- !u!1 &3517644929892162125 stripped
 GameObject:
@@ -128,4 +136,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1ba5502f3be47058637e7c529369f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 14
+  speed: 18
+--- !u!54 &782164873452988007
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3517644929892162125}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
